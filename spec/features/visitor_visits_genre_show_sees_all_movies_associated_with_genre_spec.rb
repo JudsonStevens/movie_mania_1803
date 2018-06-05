@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe 'Visitor' do
-  context 'visits the genre index page' do
-    it 'can see all genres with links to show pages, but cannot see form to create' do
+  context 'visits the genre show page' do
+    it 'can see all movies associated with that genre' do
       genre1 = Genre.create(name: 'Sci-Fi')
       director = Director.create(name: 'Brad Paisley')
       movie1 = genre1.movies.create(title: 'New Movie', description: 'New Thing Movie', director_id: director.id)
