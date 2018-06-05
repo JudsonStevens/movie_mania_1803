@@ -13,9 +13,7 @@
 <h1>Rating for this Movie:</h1>
 <%= @movie.rating %>
 
-<% if !@similar_movies.nil?%>
-  <h1>Movies That Share This Rating:</h1>
-  <% @similar_movies.each do |movie| %>
-    <%= movie.title %>
-  <% end %>
+<h1>Movies That Share This Rating:</h1>
+<% @similar_movies.each do |movie| %>
+  <%= movie.title %>
 <% end %>

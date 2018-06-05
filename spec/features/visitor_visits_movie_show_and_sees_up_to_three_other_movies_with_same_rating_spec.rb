@@ -32,5 +32,17 @@ describe 'Visitor' do
       expect(page).to_not have_content(movie5.title)
     end
 
+    it 'can see two movies with the same rating if there are only two' do
+      director = Director.create(name: 'Brad Paisley')
+      movie = director.movies.create!(title: 'New Movie', description: 'New Thing Movie', rating: 4)
+      movie2 = director.movies.create!(title: 'Newer Movie', description: 'Newer Thing Movie', rating: 4)
+      movie3 = director.movies.create!(title: 'Newest Movie', description: 'Newest Thing Movie', rating: 4)
+      genre1 = movie.genres.create(name: 'Sci-Fi')
+      genre2 = movie.genres.create(name: 'Horror')
+
+      visit(movie_path(movie.slug))
+
+      expect(page).to have_content("Movies That Share This Rating:\n#{movie2.title} #{movie3.title}")
+    end
   end
 end
