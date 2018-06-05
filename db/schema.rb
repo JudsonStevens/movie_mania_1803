@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180605153517) do
+ActiveRecord::Schema.define(version: 20180605155116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20180605153517) do
     t.datetime "updated_at", null: false
     t.bigint "director_id"
     t.string "slug"
+    t.integer "rating", default: 0
     t.index ["director_id"], name: "index_movies_on_director_id"
   end
 
