@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-06-05T10:36:38-06:00">2018-06-05T10:36:38-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-06-05T10:38:23-06:00">2018-06-05T10:38:23-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>62</b> files in total.
-    <b>624</b> relevant lines. 
-    <span class="green"><b>623</b> lines covered</span> and
+    <b>625</b> relevant lines. 
+    <span class="green"><b>624</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -247,7 +247,7 @@
         <td>11</td>
         <td>11</td>
         <td>0</td>
-        <td>6.1</td>
+        <td>6.2</td>
       </tr>
       
       <tr>
@@ -653,9 +653,9 @@
       <tr>
         <td class="strong"><a href="#fd9b7680ceddd7c55cd2adacf0d087f8adfad306" class="src_link" title="spec/models/movie_spec.rb">spec/models/movie_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>33</td>
-        <td>23</td>
-        <td>23</td>
+        <td>34</td>
+        <td>24</td>
+        <td>24</td>
         <td>0</td>
         <td>1.1</td>
       </tr>
@@ -2699,8 +2699,8 @@
           <code class="ruby">  def self.similar_movies(movie)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="15">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="15">
+          <span class="hits">11</span>
           
           <code class="ruby">    Movie.where.not(id: movie.id).where(rating: movie.rating).limit(3)</code>
         </li>
@@ -8239,8 +8239,8 @@
     <h3>spec/models/movie_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>23</b> relevant lines. 
-      <span class="green"><b>23</b> lines covered</span> and
+      <b>24</b> relevant lines. 
+      <span class="green"><b>24</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -8428,19 +8428,25 @@
           <code class="ruby">      expect(Movie.similar_movies(movie).last).to eq(movie4)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect(Movie.similar_movies(movie).include?(movie5)).to eq(false)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">end</code>

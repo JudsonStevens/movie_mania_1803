@@ -28,6 +28,7 @@ describe Movie, type: :model do
       expect(Movie.similar_movies(movie).length).to eq(3)
       expect(Movie.similar_movies(movie).first).to eq(movie2)
       expect(Movie.similar_movies(movie).last).to eq(movie4)
+      expect(Movie.similar_movies(movie).include?(movie5)).to eq(false)
     end
   end
 end
