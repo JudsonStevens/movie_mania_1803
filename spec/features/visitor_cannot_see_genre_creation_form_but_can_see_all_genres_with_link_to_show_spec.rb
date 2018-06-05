@@ -17,6 +17,10 @@ describe 'Visitor' do
     it 'can click on one of the links to go to that genres show page' do
       genre1 = Genre.create(name: 'Sci-Fi')
       genre2 = Genre.create(name: 'Horror')
+      director = Director.create(name: 'Brad Paisley')
+      movie1 = genre1.movies.create(title: 'New Movie', description: 'New Thing Movie', director_id: director.id, rating: 4)
+      movie2 = genre1.movies.create(title: 'Newer Movie', description: 'Best Thing', director_id: director.id, rating: 2)
+
 
       visit(genres_path)
       click_on(genre1.name)
