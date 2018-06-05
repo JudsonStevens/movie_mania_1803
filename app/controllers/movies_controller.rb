@@ -18,6 +18,7 @@ class MoviesController < ApplicationController
   def show
     @movie = Movie.find_by(slug: params[:slug])
     @genres = @movie.genres
+    @similar_movies = Movie.similar_movies(@movie)
   end
 
   private

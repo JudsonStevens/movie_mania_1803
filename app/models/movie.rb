@@ -10,4 +10,8 @@ class Movie < ApplicationRecord
   def generate_slug
     self.slug = title.parameterize
   end
+
+  def self.similar_movies(movie)
+    Movie.where.not(id: movie.id).where(rating: movie.rating).limit(3)
+  end
 end
