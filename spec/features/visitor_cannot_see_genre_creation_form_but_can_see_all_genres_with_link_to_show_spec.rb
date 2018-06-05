@@ -10,6 +10,8 @@ describe 'Visitor' do
 
       expect(page).to have_link(genre1.name)
       expect(page).to have_link(genre2.name)
+      expect(page).to_not have_field('genre[name]')
+      expect(page).to_not have_content('Create a New Genre')
     end
 
     it 'can click on one of the links to go to that genres show page' do
