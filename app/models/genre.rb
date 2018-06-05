@@ -10,4 +10,8 @@ class Genre < ApplicationRecord
   def highest_rated_movie
     movies.order(rating: :desc).first
   end
+
+  def lowest_rated_movie
+    movies.order(rating: :asc).first
+  end
 end

@@ -16,6 +16,8 @@ class GenresController < ApplicationController
   def show
     @genre = Genre.find(params[:id])
     @movies = @genre.movies
+    @highest_rated = @genre.highest_rated_movie
+    @lowest_rated = @genre.lowest_rated_movie
   end
 
   private
