@@ -197,6 +197,7 @@
         null,
         1,
         1,
+        1,
         null,
         null,
         1,
@@ -1051,7 +1052,7 @@
         null,
         null,
         1,
-        10,
+        12,
         null,
         null
       ],
@@ -1063,15 +1064,6 @@
         null,
         null,
         1,
-        2,
-        2,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
         5,
         5,
         null,
@@ -1079,17 +1071,23 @@
         null,
         5,
         5,
-        null,
-        null,
-        1,
-        1,
-        2,
         null,
         null
       ],
-      "/Users/judson/Turing/2module/movie_mania_1803/app/controllers/admin/categories_controller.rb": [
+      "/Users/judson/Turing/2module/movie_mania_1803/app/controllers/admin/genres_controller.rb": [
         1,
         1,
+        2,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        2,
         null,
         null
       ],
@@ -1100,7 +1098,13 @@
         1,
         null,
         1,
-        2,
+        4,
+        null,
+        null
+      ],
+      "/Users/judson/Turing/2module/movie_mania_1803/app/controllers/admin/categories_controller.rb": [
+        1,
+        1,
         null,
         null
       ],
@@ -1253,6 +1257,6 @@
         null
       ]
     },
-    "timestamp": 1528217012
+    "timestamp": 1528298290
   }
 }

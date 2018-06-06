@@ -22,7 +22,7 @@ describe "User visits genre index page" do
       expect(page).to have_content(genre1.name)
       expect(page).to have_content(genre2.name)
     end
-    
+
     it "is redirected back to genre index if creation doesn't work" do
       admin = User.create(username: "Dee", password: "password", role: 1)
 
